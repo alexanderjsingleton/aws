@@ -1,5 +1,5 @@
 # Amazon Web Services
-A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services (AWS).
+A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services (AWS).  Screencast available on [YouTube: Amazon Web Services Tutorial](https://www.youtube.com).
 
 ## AWS Console
 
@@ -33,7 +33,7 @@ A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services 
 
 5. Click on the "Connect button" and note the following [bash scripts](http://ryanstutorials.net/bash-scripting-tutorial/bash-script.php); for this exmample the exampled displayed:
 
-`sh -i "aws.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com`
+`ssh -i "aws_example.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com`
 
 Also click on the Java SSH Client Directly from my browser (Java required) radio button to note the user name if you would like to use FileZilla.
 
@@ -41,7 +41,7 @@ Also click on the Java SSH Client Directly from my browser (Java required) radio
 
 1. Fire-up your terminal; in the screencast, the environment iTerm terminal replacement was used.From the root folder '~/' within the user directory, change directories with `cd desktop/aws`.  This tut includes a cheatsheet of other UNIX commands for clarification.
 
-2. Copy/paste the bash script noted in your text-file `sh -i "aws.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com` to successfully log-in into your instance.
+2. Copy/paste the bash script noted in your text-file `ssh -i "aws.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com` to successfully log-in into your instance.
 
 3. Type in `ls` (list directory) on command-line to list the available folders.  Type `cd` to change directories into the public_html folder that is served by this instance.  If interested, feel free to nano into the 'index.html' file to see the code currently rendered on the landing-page of your instance-in this case: .  Be sure to exit the file by typing "Control + X" and Type "N" to avoid saving changes. 
 
@@ -67,12 +67,7 @@ Also click on the Java SSH Client Directly from my browser (Java required) radio
 
 ## Create a basic form within your Bitnami LAMP instance.
 
-1. We will create a basic-form to interact with the backend of this AWS instance configured as a LAMP-stack.  LAMP is an acronym for the type of application stack delivering this production, which stands for 
-  
-    + *L*INUX
-    + *A*pache
-    + *M*ySQL
-    + *P*hp
+1. We will create a basic-form to interact with the backend of this AWS instance configured as a LAMP-stack.  LAMP is an acronym for the type of application stack delivering this production, which stands for LinuxApacheMySQLPHP.
 
 If interested, please avoid distraction and read more about it at [StackOverlow](http://stackoverflow.com/questions/10060285/what-is-a-lamp-stack).
 
