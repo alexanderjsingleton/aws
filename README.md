@@ -67,9 +67,7 @@ Also click on the Java SSH Client Directly from my browser (Java required) radio
 
 ## Create a basic form within your Bitnami LAMP instance.
 
-1. We will create a basic-form to interact with the backend of this AWS instance configured as a LAMP-stack.  LAMP is an acronym for the type of application stack delivering this production, which stands for LinuxApacheMySQLPHP.
-
-If interested, please avoid distraction and read more about it at [StackOverlow](http://stackoverflow.com/questions/10060285/what-is-a-lamp-stack).
+1. We will create a basic-form to interact with the backend of this AWS instance configured as a LAMP-stack.  LAMP is an acronym for the type of application stack delivering this production, which stands for LinuxApacheMySQLPHP.  If interested, please avoid distraction and read more about it at [StackOverlow](http://stackoverflow.com/questions/10060285/what-is-a-lamp-stack).
 
 2. Download my example files available on GitHub and select the three '.php' files, then drag and drop into the right column representing the AWS directory within the FileZilla window.
 
