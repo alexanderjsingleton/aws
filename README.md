@@ -41,7 +41,7 @@ Also click on the Java SSH Client Directly from my browser (Java required) radio
 
 1. Fire-up your terminal; in the screencast, the environment iTerm terminal replacement was used.From the root folder '~/' within the user directory, change directories with `cd desktop/aws`.  This tut includes a cheatsheet of other UNIX commands for clarification.
 
-2. Copy/paste the bash script noted in your text-file `ssh -i "aws.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com` to successfully log-in into your instance.
+2. Copy/paste the bash script noted in your text-file `ssh -i "aws_example.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com` to successfully log-in into your instance.
 
 3. Type in `ls` (list directory) on command-line to list the available folders.  Type `cd` to change directories into the public_html folder that is served by this instance.  If interested, feel free to nano into the 'index.html' file to see the code currently rendered on the landing-page of your instance-in this case: .  Be sure to exit the file by typing "Control + X" and Type "N" to avoid saving changes. 
 
