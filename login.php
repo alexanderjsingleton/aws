@@ -2,5 +2,5 @@
 $hn = 'localhost';
 $db = 'music';
 $un = 'root';
-$pw = <your_password_here>;
+$pw = '7Idipx97h3Od';
 ?>
