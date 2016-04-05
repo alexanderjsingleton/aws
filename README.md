@@ -57,9 +57,7 @@ Also click on the Java SSH Client Directly from my browser (Java required) radio
 3.  To confirm successful upload, feel free to nano into the 'login.php' file- so type `nano login.php`. Now would be an opportune time to copy/paste the Bitnami application password retrieved in step 4 of the 'EC2 Dashboard' process; enter that password between the single-quotes. Type 'CTRL + X' then type 'Y' to save.
 4.  Now append '/createDB_TBL.php' to the Public DNS address within the browser address-bar that landed on the ec2 instance to the Public DNS/website address and then go to that address.
 5.  On the front-end, the web-page should display a confirmation but let's confirm success on the back-end.
-6.  Go back to the terminal and type-in the following to interact with the database:
-
-`mysql -u root -p`
+6.  Go back to the terminal and type-in the following to interact with the database:`mysql -u root -p`
 
 ## MySQL
 
