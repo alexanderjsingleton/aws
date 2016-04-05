@@ -25,21 +25,21 @@ A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services 
 
 1. After completing the last process, the EC2 Dashboard is now in view.  In my screencast, I have two other instances running for academic projets, but let us stick to the example "awsExample" instance (obviously, you could've named yours whatever).
 
-2. Click on the row within your AWS instance dashboard containing the instance name contained within the column "Key Name".
+2. Click on the row within your AWS instance dashboard of the instance name contained within the column "Key Name".
 
-3. A window beneath the Instance table will appear displaying the PUBLIC DNS address, which is essentially URL, or website address, where your instance will be located.  Highlight/Copy/Paste and save that URL within a text file; you may the instance by simply prefixing to the Public DNS and navigate to the browser to test.
+3. A window beneath the Instance table will appear displaying the PUBLIC DNS address, which is essentially the URL, or website address, where your instance will be located.  Highlight/Copy/Paste and save that URL within a text file; you may view the instance by simply prefixing to the Public DNS then navigating to the browser to test.
 
-4. Next, within the console, click on the "Actions" button, hover over "Instance Settings" and then click on "Get System Log". scroll until you see a box outlined in hashtags(#) containing the text "Setting Bitnami application password to"; copy/paste that password and note that in the text file ***BUT DO NOT SHARE IT*** as your instance could potentially be hacked.  Now exit the window.
+4. Next, within the console, click on the "Actions" button, hover over "Instance Settings" and then click on "Get System Log". scroll-down until you see a box outlined in hashtags(#) outlining the text "Setting Bitnami application password to"; copy/paste that password and note that in the text file ***BUT DO NOT SHARE IT*** as your instance could potentially be hacked.  Now exit the window.
 
 5. Click on the "Connect button" and note the following [bash scripts](http://ryanstutorials.net/bash-scripting-tutorial/bash-script.php); for this exmample the exampled displayed:
 
 `ssh -i "aws_example.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com`
 
-Also click on the Java SSH Client Directly from my browser (Java required) radio button to note the user name if you would like to use FileZilla.
+Also click on the Java SSH Client Directly from my browser (Java required) radio button to note the username if you would like to use FileZilla.
 
 ## The command-line
 
-1. Fire-up your terminal; in the screencast, the environment iTerm terminal replacement was used.From the root folder '~/' within the user directory, change directories with `cd desktop/aws`.  This tut includes a cheatsheet of other UNIX commands for clarification.
+1. Fire-up your terminal; in the screencast, the iTerm terminal was used.  From the root folder '~/' within the user directory, change directories with `cd desktop/aws`.  This tut includes a cheatsheet of other UNIX commands for clarification.
 
 2. Copy/paste the bash script noted in your text-file `ssh -i "aws_example.pem" ubuntu@ec2-52-25-111-159.us-west-2.compute.amazonaws.com` to successfully log-in into your instance.
 
@@ -71,13 +71,13 @@ Also click on the Java SSH Client Directly from my browser (Java required) radio
 
 2. Download my example files available on GitHub and select the three '.php' files, then drag and drop into the right column representing the AWS directory within the FileZilla window.
 
-3. To confirm successful upload, feel free to nano into the 'login.php' file- so type 'nano login.php'.  Now would be an opportune time to copy/paste the Bitnami application password retrieved in step 4 of the 'EC2' process; enter that password between in between the single-quotes.  Type 'CTRL + X' then type 'Y' to save.  
+3. To confirm successful upload, feel free to nano into the 'login.php' file- so type 'nano login.php'.  Now would be an opportune time to copy/paste the Bitnami application password retrieved in step 4 of the 'EC2' process; enter that password between the single-quotes.  Type 'CTRL + X' then type 'Y' to save.  
 
-4. Now go to the '/createDB_TBL.php' witin the broswer that landed on the ec2 instance to the Public DNS/website address and then go to that address; in this example it was:
+4. Now go to the '/createDB_TBL.php' within the broswer that landed on the ec2 instance to the Public DNS/website address and then go to that address; in this example it was:
 
 `/createDB_TBL.php`
 
-5. On the fron-end, the web-page should display a confirmation but let's confirm successful con the back-end.
+5. On the fron-end, the web-page should display a confirmation but let's confirm success on the back-end.
 
 6. Go back to the terminal and type-in the following to interact with the database:
 
@@ -93,19 +93,19 @@ The password entered will be the same password referenced in the 'login.php' fil
 
 10. Type 'quit' to exit MySQL
 
-11. Next go to your instance page prefixed with /mysqltest.php (e.g. in screencast example it was '')
+11. Next, go to your instance page prefixed with /mysqltest.php (e.g. in screencast example it was '')
 
-12. A rudimentary form should be displayd with fields to input 'Artist' and 'Album'.  Have at it!  Enter some bangers.
+12. An elementary form should be displayd with fields to input 'Artist' and 'Album'.  Have at it!  Enter some bangers.
 
-13. Type enter and you will see your tunes rendered!  This means that data is contained within the back-end.
+13. Type enter and you will see your tunes returned!  This means that data is contained within the back-end.
 
 14. To verify, type 'mysql -u root -p' (remember, copy and paste the password noted in step #6).
 
 15. Now type 'SELECT * FROM music;'
 
-16. Que the [DoofDoof](https://soundcloud.com/alexanderjsingleton) music.
+16. [DoofDoof](https://soundcloud.com/alexanderjsingleton) music.
 
-## You are now ready to begin the exploring the wonderful world of php web development!  Feel free to contact me if you would like to connect and chat about all the things.  Thanks!
+## You are now ready to begin exploring the wonderful world of php web development!  Feel free to contact me if you wish to connect and chat about all the things.  Thanks!
 
 
 
