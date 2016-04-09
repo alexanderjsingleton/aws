@@ -1,3 +1,9 @@
+I've decided to provide a quick demonstration of how to create a Bitnami LAMP instance on Amazon Web Services (AWS) ec2 virtual cloud.  This tutorial aims to educate public interests on how ostensibly simple website interactions are actually quite complex and easy to take for granted.
+
+The instructions below are from the README file contained within the tutorial-files available at my [GitHub repo: aws_example](https://github.com/alexanderjsingleton/aws). I've also uploaded a screencast to [YouTube](https://www.youtube.com/watch?v=3UYgzcpWIeA) and [Vimeo](https://vimeo.com/161710730); I don't care how derpy I sound so long as it helps others- at least I can write like the wind...
+
+  [embed]https://vimeo.com/161710730[/embed]  
+
 # Amazon Web Services
 
 A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services (AWS). Screencast available on [YouTube: Amazon Web Services Tutorial](https://www.youtube.com).
@@ -10,7 +16,7 @@ A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services 
 
 ## Create Instance
 
-1.  _Choose AMI:_ Upon landing on the first step of the instantation (Step 1 Choose an Amazon Machine Image (AMI)), search for "LAMP" and select the "LAMP Stack powered by Bitnami" from the results.
+1.  _Choose AMI:_ Upon landing on the first step of the instantiation (Step 1 Choose an Amazon Machine Image (AMI)), search for "LAMP" and select the "LAMP Stack powered by Bitnami" from the results.
 2.  _Choose Instance Type:_ For the sake of this exercise, we will proceed with the "Microinstance", so just click on the "Review and Launch" button- no other selections are required for free-tier, which means steps 3-6 will be skipped.
 3.  _Review:_ Again, this is a free-tier demo, which means steps 3-6 have been skipped, so just click on the "Launch" button.
 4.  "Launch" will prompt a window with a request to "Select an existing key pair or create a new key pair"; in this example, we will select "Create a new key pair" from the dropdown menu within the window called "awsExample" creating a .pem file (a private key required for Secure SHell (SSH)) which will be downloaded and saved within our local subfolder on our desktop.
@@ -18,7 +24,7 @@ A demonstration of creating an ec2 Bitnami LAMP instance on Amazon Web Services 
 
 ## EC2 Dashboard
 
-1.  After completing the last process, the EC2 Dashboard is now in view. In my screencast, I have two other instances running for academic projets, but let us stick to the example "awsExample" instance (obviously, you could've named yours whatever).
+1.  After completing the last process, the EC2 Dashboard is now in view. In my screencast, I have two other instances running for academic projects, but let us stick to the example "awsExample" instance (obviously, you could've named yours whatever).
 2.  Click on the row within your AWS instance dashboard of the instance name contained within the column "Key Name".
 3.  A window beneath the Instance table will appear displaying the "PUBLIC DNS address", which is essentially the URL, or website address, where your instance will be located. Highlight/Copy/Paste and save that URL within a text file; you may view the instance by simply prefixing to the Public DNS then navigating to the browser to test.
 4.  Next, within the console, click on the "Actions" button, hover over "Instance Settings" and then click on "Get System Log"; scroll-down until you see a box outlined in hashtags(#) outlining the text "Setting Bitnami application password to"; copy/paste that password and note that in the text file **_BUT DO NOT SHARE IT_** as your instance could potentially be hacked. Now exit the window.
@@ -68,7 +74,7 @@ The password entered will be the same password referenced in the 'login.php' fil
 3.  Type `desc mymusic` to see the id and corresponding columns which will store that data eventually input.
 4.  Type `quit` to exit MySQL
 5.  Next, go to your instance page prefixed with /mysqltest.php (e.g. in screencast example it was '')
-6.  An elementary form should be displaued with fields to input 'Artist' and 'Album'. Have at it! Enter some bangers.
+6.  An elementary form should be displayed with fields to input 'Artist' and 'Album'. Have at it! Enter some bangers.
 7.  Type enter and you will see your tunes returned! This means that data is contained within the back-end.
 8.  To verify, go back to the terminal window and type `mysql -u root -p` (remember, copy and paste the password noted in step #6).
 9.  Now type `SELECT * FROM music;`
